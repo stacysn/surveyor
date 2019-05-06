@@ -70,6 +70,7 @@ module Surveyor
 
     def surveys
       copy_file "surveys/kitchen_sink_survey.rb"
+      copy_file "surveys/running_survey.rb"
       copy_file "surveys/quiz.rb"
       copy_file "surveys/date_survey.rb"
       copy_file "surveys/languages.rb"

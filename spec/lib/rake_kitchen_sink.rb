@@ -22,6 +22,17 @@ describe Surveyor::Parser do
 
     Survey.all.map(&:destroy)
   end
+  it "should return properly parse the running survey" do
+    ENV["FILE"]="surveys/running_survey.rb"
+    @rake["surveyor"].invoke
+    Survey.count.should == 1
+    SurveySection.count.should ==1
+    Question.count.should == 2
+    Answer.count.should == 2
+    Dependency.count.should == 0
+    DependencyCondition.count.should == 1
+    QuestionGroup.count.should == 1
+  ]
   it "should return properly parse a UTF8 survey" do
     ENV["FILE"]="../spec/fixtures/chinese_survey.rb"
     @rake["surveyor"].invoke
