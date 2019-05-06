@@ -166,19 +166,25 @@ Copyright (c) 2008-2013 Brian Chamberlain and Mark Yoon, released under the [MIT
 ## Notes/Reflection
 
 Bundler version 1.6.1 is not compatible with the surveyor gem. With a current Bundler version of 2.0.1 and a Rails version of 5.2.3:
+
     - To try to go around this, I tried a few ways:
+
         1. specify Bundle version in Gemfile with the following commands:
+
             ```
             gem install bundler -v 1.6.1
             bundle _1.6.1_ install
             ```
+
         2. added rvm to help use specified ruby version in Gemfile
             ```
             rvm @global do gem uninstall bundler
             rvm @global do gem install bundler -v 1.6.5
             ```
+
         3. changed the versions of the different gems as specified in the [documents](https://rubygems.org/gems/surveyor/versions/1.3.0)
         
+
     - Both of these ways unfortunately did not solve the issue of running the gems with different versions.
 
 # surveyor
