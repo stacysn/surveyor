@@ -162,5 +162,14 @@ you don't have it, then bundle, generate the app in `testbed`, and run the specs
 Copyright (c) 2008-2013 Brian Chamberlain and Mark Yoon, released under the [MIT license][mit]
 
 [mit]: https://github.com/NUBIC/surveyor/blob/master/MIT-LICENSE
+
+## Notes/Reflection
+
+Bundler version 1.6.1 is not compatible with the surveyor gem.
+    - To try to go around this, I tried a few ways:
+        1. specifiy Bundle version in Gemfile
+        2. added rvm to help use specified ruby version in Gemfile
+    - Both of these ways unfortunately did not solve the issue of running the gems with different versions.
+
 # surveyor
-# surveyor
+
